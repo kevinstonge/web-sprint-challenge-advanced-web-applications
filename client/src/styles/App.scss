@@ -1,25 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-html,
-body,
-#root,
-.App {
-  width: 100%;
+@import "./base.scss";
+#root {
+  width: 100vw;
+  height: 100vh;
+  @include flexC();
+}
+header {
+  @include flexR();
+  gap: 1rem;
+}
+svg {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
-
-.App {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  display: flex;
-
-  svg {
-    height: 100%;
-  }
+.row {
+  @include flexR();
+  align-items: flex-start;
 }
-
 .spacer {
   height: 100%;
 }
@@ -51,6 +47,10 @@ body,
 
 .delete {
   color: rgb(216, 87, 87);
+}
+.add {
+  color: green;
+  font-weight: bold;
 }
 
 .color-box {
